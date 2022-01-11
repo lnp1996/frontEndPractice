@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      #check {
+        display: none;
+      }
+      .element {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s;
+      }
+      :checked ~ .element {
+        cursor: pointer;
+        max-height: 100%;
+      }
+
+      .check-out {
+        display: none;
+      }
+      :checked ~ .check-out {
+        display: block;
+      }
+      :checked ~ .check-in {
+        display: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <input id="check" type="checkbox" />
+    <p>看不见我</p>
+    <div class="element">
+      <button>按钮1</button>
+      <button>按钮2</button>
+      <button>按钮3</button>
+      <button>按钮4</button>
+      <!-- <p>
+        display:table-cell其他display:table-cell其他一些应用，例如，两栏自适应布局，垂直居中效果等等都是可以通过其他技术手段模拟出来的，但是，根据列表个数自动等宽的效果，其他CSS是很难模拟的，尤其当需要兼容IE8浏览器的时候。
+      </p> -->
+    </div>
+    <label for="check" class="check-in">更多↓</label>
+    <label for="check" class="check-out">收起↑</label>
+    <p style="width: 500px">
+      fjsekfjklesjflk;esjfl;esjfglv;eskjfjsekfjklesjflk;esjfl;esjfglv;esk
+      jlg;kgrdgrgfjsekfjklesjflk;esjfl;esjfglv;eskjlg;kgrdgrgfjsekfjkl
+      esjflk;esjfl;esjfglv;eskjlg;kgrdgrgfjsekfjklesjflk;esjfl;esjfglv;esk
+      jlg;kgrdgrgfjsekfjklesjflk;esjfl;esjfglv;eskjlg;kgrdgrglg;kgrdgfjsekfj
+      klesjflk;esjfl;esjfglv;eskjlg;kgrdgrgfjsekfjklesjflk;esjfl;esjfglv;esk
+      jlg;kgrdgrgfjsekfjklesjflk;esjfl;esjfglv;eskjlg;kgrdgrgfjsekfjklesjflk;
+    </p>
+  </body>
+</html>

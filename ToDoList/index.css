@@ -1,0 +1,86 @@
+/* 头部 */
+.header {
+    height: 52px;
+    background-color: #323232;
+}
+
+.header_mid {
+    height: 52px;
+    color: #DDDDDD;
+}
+
+.header_mid span {
+    font-size: 24px;
+    line-height: 52px;
+}
+
+.header_mid input {
+    height: 25px;
+    width: 60%;
+    margin-top: 13px;
+    border-radius: 5px;
+    text-indent: 1em;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.24), 0 1px 6px rgba(0, 0, 0, 0.45) inset;;
+    border: none;
+}
+
+/* 主体 */
+.bodys {
+    /* 处理外边框合并 */
+    overflow: hidden;
+}
+
+.bodys h2 {
+    margin: 15px 0;
+}
+
+.bodys span {
+    height: 20px;
+    width: 20px;
+    background-color: #fff;
+    padding: 2px;
+    line-height: 20px;
+    text-align: center;
+    border-radius: 50%;
+    font-size: 16px;
+}
+
+.bodys li {
+    background-color: #FFFFFF;
+    height: 25px;
+    line-height: 25px;
+    border-radius: 3px;
+    border-left: 5px solid #629A9C;
+    margin: 10px 0 ;
+    padding: 4px 10px;
+}
+
+.bodys li input {
+    float: left;
+    width: 22px;
+    height: 22px;
+    margin: 2px 10px 0 0;
+}
+.bodys li p {
+    float: left;
+    border: 1px solid #ccc;
+    width: 89%;
+}
+.bodys li a {
+    float: right;
+    background-color: #ccc;
+    width: 14px;
+    height: 12px;
+    border-radius: 18px;
+    border: 6px double #FFF;
+    text-align: center;
+    line-height: 12px;
+    color: white;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+
+.footer {
+    text-align: center;
+}

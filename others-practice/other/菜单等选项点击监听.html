@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+        #box ul li {
+            background-color: pink;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id="box">
+      <ul>
+        <li>
+          <input type="radio" id="li1" name="hello" />
+          <label for="li1">第1个选项</label>
+        </li>
+        <li>
+          <input type="radio" id="li2" name="hello"/>
+          <label for="li2">第2个选项</label>
+        </li>
+      </ul>
+    </div>
+    <script>
+      function handleClick(event) {
+        console.log(event.target.childNodes[1]);
+        event.target.childNodes[1].checked = !event.target.childNodes[1].checked
+      }
+      let list = document.querySelectorAll("li");
+      for (let i of list) {
+        i.addEventListener("click",handleClick);
+      }
+    </script>
+  </body>
+</html>

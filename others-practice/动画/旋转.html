@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        div img {
+            margin-left: 20em ;
+            background-color: black;
+            transform: rotate(90deg);
+            transition: transform .25s;
+        }
+        /*注意，动画在做完之后是自动原归位的 */
+        img:hover {
+            transform: rotate(180deg);
+        }
+        progress {
+            margin-top: 20em ;
+            display: block;
+            transform: rotate(90deg);
+        }
+
+
+    </style>
+</head>
+
+<body>
+    <!-- 进度条 -->
+    <progress value="0.6"></progress>
+    <!-- 照片/代码段 -->
+    <figure>jfsejf</figure>
+    <!-- 显示数据区间范围、温度计 -->
+    <meter value="0.7"></meter>
+    <div id ="app"> 
+        <img src="./upDownRaw.png" alt="箭头">
+    </div>
+
+</body>
+
+</html>

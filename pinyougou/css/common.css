@@ -1,0 +1,306 @@
+/* 公共样式 */
+.fl {
+    float: left;
+}
+.fr {
+    float: right;
+}
+/* 版心 */
+.w {
+    width: 1200px;
+    /* 上下为0，左右自动 */
+    margin: 0 auto; 
+}
+
+/* 没有起作用 */
+.style-red {
+    color: #c81623;
+}
+
+.spacer {
+    width: 1px;
+    height: 12px;
+    margin: 10px 12px 0;
+    background-color: #666;
+}
+
+.icomoon {
+    font-family: 'icomoon';
+}
+
+
+
+/* 头部 */
+.shortcut {
+    height: 31px;
+    background-color: #f1f1f1;
+    line-height: 31px;
+}
+
+.shortcut li {
+    float: left;
+}
+/* header区域 */
+.header {
+    position: relative;
+    height: 105px;
+}
+
+.logo {
+    position: absolute;
+    top: 25px;
+    left: 0;
+    width: 175px;
+    height: 56px;
+}
+
+.logo a {
+    display: block;
+    width: 175px;
+    height: 56px;
+    background: url(../img/logo.png) no-repeat;
+    /* 不想让文字显示 */
+    /* 方法一： */
+    /* text-indent: -30em;
+    overflow: hidden; */
+    /* 方法二 */
+    font-size: 0;
+}
+
+.search {
+    position: absolute;    
+    left: 348px;
+    top: 25px;
+}
+
+/* 搜索框 */
+.text {
+    width: 445px;
+    height: 32px;
+    border: 2px solid #b1191a;
+    padding-left: 10px;
+    color: #ccc;
+}
+.btn {
+    width: 82px;
+    height: 36px;
+    background-color: #b1191a;
+    border: 0;
+    font-size: 16px;
+    color: white;
+}
+
+/* 热词 */
+.hotwords {
+    position: absolute;
+    top: 65px;
+    left: 348px;
+}
+
+.hotwords a {
+    margin: 0 10px;
+}
+
+/* 购物车 */
+.shopcar {
+    position: absolute;
+    top: 25px;
+    right: 64px;
+    width: 138px;
+    height: 34px;
+    line-height: 34px;
+    background-color: #f7f7f7;
+    border: 1px solid #dfdfdf;
+    text-align: center;
+}
+
+.car { 
+    display: inline;
+    color: #da5555;
+}
+.arrow {
+    display: inline;
+}
+.count {
+    position: absolute;
+    top: -5px;
+    left: 105px;
+    background-color: #e60012;
+    height: 14px;
+    line-height: 14px;
+    padding: 0 3px;
+    border-radius: 7px 7px 7px 0;
+    color: white;
+}
+
+/* nav start */
+.nav {
+    height: 45px;
+    border-bottom: 2px solid #b1191a;
+}
+
+.dropdown {
+    width: 209px;
+    height: 45px;
+}
+.dropdown .dt {
+    height: 100%;
+    background-color: #b1191a;
+    font-size: 16px;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+}
+
+.dropdown .dd {
+    height: 465px;
+    background-color: #c81623;
+    margin-top: 2px;
+}
+
+.menu_item {
+    height: 31px;
+    line-height: 31px;
+    margin-left: 2px;
+    padding: 0 10px;
+    /* 动画 */
+    transition: all 0.5s;
+}
+.menu_item:hover {
+    background-color: white;
+    padding-left: 20px;
+}
+
+/* 鼠标经过li里面的a变颜色 */
+.menu_item:hover a {
+    color: #c81623;
+}
+
+.menu_item {
+    font-size: 14px;
+    color: white;
+}
+.menu_item a {
+    color: white;
+}
+
+.menu_item i {
+    float: right;
+    font-size: 18px;
+}
+
+.navitems {
+    margin-left: 10px;
+}
+
+.navitems li {
+    float: left;
+}
+
+.navitems li a {
+    padding: 0 25px;
+    line-height: 45px;
+    font-size: 16px;
+    transition: all 0.5s;
+}
+.navitems li a:hover {
+    font-size: 18px;
+}
+
+/* --------------尾部------------- */
+
+.footer {
+    height: 386px;
+    background-color: #f5f5f5;
+    padding-top: 30px;
+}
+
+.mod_service {
+    height: 79px;
+    border-bottom:  1px solid #ccc;
+}
+
+.mod_service li {
+    float: left;
+    width: 240px;
+    height: 79px;
+}
+
+.mod_service_icon {
+    float: left;
+    height: 50px;
+    width: 50px;
+    margin-left: 35px;
+    background:url(../img/icons.png) no-repeat ;
+}
+
+.mod_service_zheng {
+    background-position: -253px -3px;
+}
+
+.mod_service_tit {
+    float: left;
+    margin-left: 6px;
+}
+
+.mod_service_tit h5 {
+    margin: 4px 0;
+    font-size: 16px;
+}
+
+.mod_service_kuai {
+    background-position: -255px -54px;
+}
+
+.mod_service_bao {
+    background-position: -257px -105px;
+}
+
+.mod_service_te {
+    background-position: -257px -157px;
+}
+
+.mod_service_help {
+    background-position: -256px -209px;
+}
+
+.mod_help {
+    height: 187px;
+    border-bottom: 1px solid #ccc;
+}
+
+.mod_help_item {
+    float: left;
+    width: 150px;
+    padding: 20px 0 0 50px;
+}
+
+.mod_help_item dt {
+    height: 25px;
+    font-size: 16px;
+}
+
+.mod_help_item dd {
+    height: 22px;
+}
+
+.mod_help_app dt,
+dd p{
+    margin-left: 15px;
+}
+
+.mod_help_app img {
+    margin: 5px 0;
+}
+
+.mod_copyright {
+    text-align: center;
+}
+
+.mod_copyright_links {
+    margin: 16px 0;
+}
+
+.mod_copyright_info {
+    line-height: 18px;
+}

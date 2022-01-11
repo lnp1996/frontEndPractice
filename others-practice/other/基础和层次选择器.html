@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+</head>
+
+<body>
+    <div class ="box"> 
+        <p id= 'p1'>姓名</p>
+        <ul>
+            <li class="item1">张三</li>
+            <li>李四</li>            
+        </ul>
+    </div>
+
+    <script>
+
+            //jquery对象转js对象
+            console.log($("#id")[0])
+            console.log($("#id").get(0))
+            //jquery页面加载 函数
+            $(document).ready(function(){
+                alert("hell1")
+            }) 
+            //入口函数简写方式
+            $(function(){
+                $('#id').css('color','red')
+                alert("hell2")
+            })
+            //jquery提供了一个解决多个变量命名空间冲突的方法
+            // jQuery.noConflict() //将jQuery中的变量的控制权交给用户（也就是变量如果有冲突的话优先使用用户定义的变量）
+            // var $ = '1234';
+            // console.log($)
+
+        //jQuery选择器的作用：返回一个jQuery对象
+        //id
+        console.log($('#p1'));
+        //class
+        console.log($('.box'));
+        //标签
+        console.log($('li'))
+        //后代
+        console.log($('.box li'))
+        //子代
+        console.log($('.box>ul'))
+        //+  获取后一个兄弟标签
+        console.log($('.item1+li'))
+        //~  除item1标签其他的兄弟标签
+        console.log($('.item1~li'))
+        
+        //组合
+        console.log($('p,ul,li'))
+        
+        //remove方法既删除节点，又删除事件，而detach方法只删除节点，而保留了事件
+
+        //清空：.empty()或.html('')
+        //注意区分：text()、html()、val()
+        //复制节点.clone(true),true表示：克隆出来之后的新节点和原节点有相同的行为
+        
+        $(function(){
+            //ajax：在不重载页面的情况下进行局部刷新
+            $.ajax({
+                url:'',
+                method:'get',//默认是get
+                success:function(res){
+                    `<p> ${res}</p>`
+                }
+            })
+
+            // $.ajax({
+            //     url:'',
+            //     method:'post',//默认是get
+            //     data:{
+            //     },
+            //     success:function(res){
+                     
+            //     }
+            // })
+            
+        })
+        
+    </script>
+</body>
+
+</html>

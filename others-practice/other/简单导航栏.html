@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src=""></script>
+    <style>
+        /* 1.变化样式 有大小 一行显示，想到了行内元素 (但是行内元素是不能直接设置大小的,所以可以用行内块元素)*/
+        a {
+            display: inline-block;
+            width: 100px; 
+            height: 30px;
+            background-color: pink;
+            /* 让文字水平居中,在css里面没有垂直居中的单词，我们需要借助line-height来实现*/
+            text-align: center;
+            /* 让单行文字垂直居中 */
+            line-height: 30px;
+            color: white;
+            /* 没有下划线 */
+            text-decoration: none;
+        }
+        /* 2.鼠标经过 变化底色和文字颜色 */
+        a:hover {
+            background-color:orange;
+            color:yellow;
+        }
+    </style>
+</head>
+
+<body>
+    <a href="">新闻</a>
+    <a href="">体育</a>
+    <a href="">汽车</a>
+    <a href="">好用</a>
+
+    <script>
+    </script>
+</body>
+
+</html>

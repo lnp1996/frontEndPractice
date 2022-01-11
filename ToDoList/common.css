@@ -1,0 +1,17 @@
+/* 设置版心样式 */
+.w {
+    width: 600px;
+    margin: 0 auto;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+body {
+    background-color: #CDCDCD;
+}

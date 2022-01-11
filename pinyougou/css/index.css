@@ -1,0 +1,346 @@
+/* 首页样式 */
+.main {
+    width: 980px;
+    height: 455px;
+    margin-left: 219px;
+    margin-top: 10px;
+}
+
+.focus {
+    position: relative;
+    /*overflow: hidden;  隐藏其他轮播图片 */
+    overflow: hidden;
+    width: 720px;
+    height: 455px;
+}
+
+.arrow_l,
+.arrow_r {
+    position: absolute;
+    top: 50%;
+    transform: translate(0,-50%);
+    width: 26px;
+    height: 40px;
+    background: rgba(0,0,0,.2);
+    line-height: 40px;
+    text-align: center;
+    color: white;
+    font-size: 18px;
+}
+.arrow_r {
+    right: 0;
+}
+
+.focus_circle {
+    position: absolute;
+    bottom: 10px;
+    left: 50px;
+}
+
+.focus_circle li{
+    float: left;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    /* background-color: pink; */
+    border-radius: 50%;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* 鼠标经过变成小手 */
+    cursor: pointer;
+}
+
+.current {
+    background-color: #fff;
+}
+
+.newsflash {
+    width: 250px;
+    height: 455px;
+}
+
+.news {
+    height: 163px;
+    border: 1px solid #ccc;
+}
+
+.news_hd {
+    height: 32px;
+    font-size: 14px;
+    line-height: 32px;
+    padding: 0 15px;
+    /* dotted 点线 dashed 虚线 */
+    border-bottom: 1px dotted #ccc;
+}
+
+.news_hd a {
+    float: right;
+    font-size: 12px;
+}
+
+.new_bd {
+    padding: 10px 5px 5px 10px;
+}
+
+.new_bd li {
+    height: 23px;
+}
+
+.lifeservice {
+    height: 208px;
+    border: 1px solid #ccc;
+    border-top: none;
+    overflow: hidden;
+}
+
+.lifeservice ul {
+    width: 252px;
+}
+
+.lifeservice li {
+    position: relative;
+    float: left;
+    width: 62px;
+    height: 70px;
+    border-right: 1px solid #ccc;
+    border-bottom: 1px solid #ccc;
+}
+.lifeservice li a {
+    display: block;
+    height: 100%;
+    /* overflow: hidden; 解决外边距合并的问题，之所以用此行代码能够解决，
+    实质是因为overflow将会使得a创建了一个bfc（块级格式上下文），
+    使得子元素在父元素的bfc中进行计算大小，所以在bfc中的元素改变就不会影响父级（bfc之外）元素*/
+    overflow: hidden;
+}
+.lifeservice li p  {
+    text-align: center;
+}
+.service_ico {
+    display: block;
+    width: 24px;
+    height: 24px;
+    background: url(../img/icons.png) no-repeat;
+    margin: 10px auto;
+}
+
+
+.service_ico_huafei {
+    background-position: -17px -16px;
+}
+
+.service_ico_feiji {
+    width: 25px;
+    background-position: -78px -16px;
+}
+.service_ico_dianying {
+    width: 26px;
+    background-position: -140px -16px;
+}
+.service_ico_game {
+    width: 26px;
+    height: 24px;
+    background-position: -206px -16px;
+}
+.service_ico_caipiao {
+    background-position: -17px -88px;
+}
+.service_ico_jiayou {
+    width: 26px;
+    height: 23px;
+    background-position: -77px -88px;
+}
+.service_ico_jiudian {
+    width: 24px;
+    height: 23px;
+    background-position: -141px -88px;
+}
+.service_ico_huoche {
+    width: 26px;
+    height: 23px;
+    background-position: -206px -88px;
+}
+.service_ico_zhongchou {
+    width: 24px;
+    height: 27px;
+    background-position: -17px -159px;
+}
+.service_ico_licai {
+    width: 26px;
+    height: 27px;
+    background-position: -78px -158px;
+}
+.service_ico_lipinka {
+    margin-top: 16px;
+    width: 24px;
+    height: 20px;
+    background-position: -141px -159px;
+}
+.service_ico_baitiao {
+    width: 26px;
+    height: 27px;
+    background-position: -206px -159px;
+}
+
+.hot {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 12px;
+    height: 15px;
+    background: url(../img/jian.jpg) no-repeat;
+}
+
+
+.bargain {
+    height: 75px;
+    margin-top: 5px;
+}
+
+/* 推荐模块 */
+.recommend {
+    height: 163px;
+    margin-top: 10px;
+}
+
+.recom_hd {
+    width: 200px;
+    height: 163px;
+    background-color: #5c5251;
+    text-align: center;
+}
+.recom_hd img {
+    margin: 30px 0 10px 0;
+}
+.recom_hd h3 {
+    font-size: 18px;
+    color: white;
+    font-weight: normal;
+}
+
+.recom_bd {
+    width: 1000px;
+    height: 163px;
+    background-color: #ebebeb;
+}
+
+.recom_bd li {
+    float: left;
+    width: 249px;
+    height: 145px;
+    border-right: 1px solid #ccc;
+    margin-top: 9px;
+}
+
+.recom_bd .last {
+    border-right: 0;
+}
+
+/* floor */
+.box_hd {
+    height: 30px;
+    border-bottom: 2px solid #c81623;
+    margin-top: 18px;
+}
+
+.box_hd h3 {
+    font-size: 18px;
+    color: #c81623;
+}
+
+.tab_list {
+    line-height: 30px;
+}
+
+.tab_list li {
+    float: left;
+}
+
+.tab_list a {
+    margin: 0 12px;
+}
+
+.box_bd {
+    height: 360px;
+}
+
+.w209 {
+    width: 209px;
+
+    background-color: #f9f9f9;
+}
+.w329 {
+    width: 329px;
+}
+.w219 {
+    width: 219px;
+    border-right: 1px solid #ccc;
+}
+.w220 {
+    width: 220px;
+    border-right: 1px solid #ccc;
+}
+
+.tab_content li {
+    float: left;
+    height: 360px;
+}
+
+.tab_content_item {
+    border-bottom: 1px solid #ccc;
+}
+
+.tab_content_list li {
+    width: 86px;
+    height: 32px;
+    line-height: 32px;
+    border-bottom: 1px solid #ccc;
+    margin-left: 12px;
+    text-align: center;
+}
+
+.tab_content_list {
+    margin-bottom: 15px;
+}
+
+
+/* 加入动画 */
+.box_bd img {
+    transition: all 0.3s;
+}
+/* 鼠标经过图片，往右走8px */
+.box_bd img:hover {
+    margin-left: 8px;
+}
+.box_bd li {
+    overflow: hidden;
+}
+
+
+/* 电梯导航 */
+.fixedtool {
+    position: fixed;
+    top: 25%;
+    left: 50%;
+    margin-left: -670px;
+    /* transform: translate(-50%,0); */
+    width: 66px;
+    background-color: #fff;
+}
+
+.fixedtool li {
+    height: 32px;
+    line-height: 32px;
+    font-size: 12px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+.fixedtool li:hover {
+    font-size: 16px;
+}
+
+.fixedtool .current {
+    background-color: #c81623;
+    color: white;
+}

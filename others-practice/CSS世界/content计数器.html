@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      .counter1 {
+        counter-reset: wangxiaoer1 2 wangxiaosan 3;
+        counter-increment: wangxiaoer1 -1;
+      }
+      .counter1::before {
+        content: counter(wangxiaoer1);
+        counter-increment: wangxiaoer1;
+      }
+      .counter1::after {
+        content: counter(wangxiaosan);
+      }
+
+      /* css计数器格式化列表编号 -----------------------------------*/
+      .reset {
+          padding-left: 2em;
+          counter-reset: wangxiaoer;
+      }
+      .counter::before {
+          content: counters(wangxiaoer,'-')'.';
+          counter-increment: wangxiaoer;
+      }
+      li {
+          list-style-type: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div>
+      <p>我叫王小二，字如其名，下面要出现的数字是：</p>
+      <p class="counter1"></p>
+    </div>
+
+    <ul class="reset">
+      <li class="counter">我是王小二
+        <ul class="reset">
+          <li class="counter">我是王小二的大儿子</li>
+          <li class="counter">
+            我是王小二的二儿子
+            <ul class="reset">
+              <li class="counter">我是王小二的二儿子的大儿子</li>
+              <li class="counter">我是王小二的二儿子的二儿子</li>
+              <li class="counter">我是王小二的二儿子的小儿子</li>
+            </ul>
+          </li>
+          <li class="counter">我是王小二的小儿子</li>
+        </ul>
+      </li> 
+      <li class="counter">我是王小三</li>
+      <li class="counter">我是王小四
+          <ul class="reset">
+              <li class="counter">
+                  我是王小四的大儿子
+              </li>
+              <li class="counter">
+                我是王小四的二儿子
+            </li>
+          </ul>
+      </li>
+    </ul>
+  </body>
+</html>

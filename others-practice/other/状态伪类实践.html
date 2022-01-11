@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+        input[type="number"]:focus:out-of-range {
+            color: red;
+            /* border: 1px solid red; */
+        }
+        input[type="number"]:focus:in-range {
+            color: blue;
+        }
+        input[type="number"]:focus:invalid {
+          font-weight: bold;
+        }
+    </style>
+  </head>
+
+  <body>
+    <div id="app">
+      <input id="nickels" type="number" min="0" max="1000" step="2" />
+      <pre contenteditable>我是内容</pre>
+    </div>
+  </body>
+</html>

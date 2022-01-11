@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      .menu ul {
+        margin: 0;
+        list-style: none;
+        padding-left: 20px;
+        display: none;
+      }
+      .menu .title {
+        font-size: 18px;
+        cursor: pointer;
+      }
+      .menu .title::before {
+        content: '▶ ';
+        color: green;
+      }
+      .open .title::before {
+        content: '▼ ';
+      }
+      .open ul {
+        display: block;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="menu" id="sweeties">
+      <span class="title">Sweeties (click me)!</span>
+      <ul>
+        <li>Cake</li>
+        <li>Donut</li>
+        <li>Honey</li>
+      </ul>
+    </div>
+    <script>
+      function handler(event) {
+        console.log("hello")
+        let titleElem = this.querySelector('.title');
+        this.classList.toggle('open');
+      }
+      let btn = document.getElementById('sweeties');
+      btn.addEventListener('click', handler);
+    </script>
+  </body>
+</html>

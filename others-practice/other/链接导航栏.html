@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src=""></script>
+    <style>
+        div.nav {
+            /* 让6个连接水平居中对齐  */
+            /* 这句话对行内元素和行内块元素都有效果 */
+            text-align: center;
+        }
+
+        .nav a {
+            /* 因为a是行内元素，是不能直接设置宽度和高度的 */
+            display: inline-block;
+            width: 127px; 
+            height: 74px;
+            /* 文本水平居中对齐 */
+            line-height: 74px;
+            color: white;
+            text-decoration: none;
+            background-image: url(images/anniu.png);
+        }
+
+        /* 鼠标放上连接变换背景图 */
+        .nav a:hover {
+            background-image: url(images/moshou.jpg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="nav">
+        <a href="#">网站首页</a>
+        <a href="#">网站首页</a>
+        <a href="#">网站首页</a>
+        <a href="#">网站首页</a>
+        <a href="#">网站首页</a>
+        <a href="#">网站首页</a>
+
+    </div>
+
+    <script>
+    </script>
+</body>
+
+</html>

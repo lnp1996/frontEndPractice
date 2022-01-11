@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>热点图demo</title>
+    <style>
+      * {
+        margin: 0;
+        padding: 0;
+        -moz-user-select: none;
+
+        -webkit-user-select: none;
+
+        -ms-user-select: none;
+
+        -khtml-user-select: none;
+
+        user-select: none;
+      }
+      .map {
+        position: relative;
+        width: 700px;
+        height: 700px;
+        background-color: rgb(59, 59, 59);
+      }
+      /* .city {
+        position: absolute;
+        top: 200px;
+        left: 400px;
+        color: #fff;
+      } */
+      div[class="dotted"] {
+        width: 5px;
+        height: 5px;
+        background-color: #09f;
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+      }
+      div[class^="pulse"] {
+        position: absolute;
+        /* //水平垂直居中 */
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 8px;
+        height: 8px;
+        /* 不要给边框,给盒子阴影 */
+        box-shadow: 0 0 6px #0099fd;
+        border-radius: 50%;
+        animation: pulse 1s linear infinite;
+      }
+      /* 动画队列的先后关系 */
+      /* 需要提权 */
+      .pulse2 {
+        animation-delay: 0.2s;
+      }
+      .pulse3 {
+        animation-delay: 0.4s !important;
+      }
+      @keyframes pulse {
+        0% {
+        }
+        20% {
+          width: 10px;
+          height: 10px;
+          /* 透明度 */
+          opacity: 1;
+        }
+        40% {
+          width: 30px;
+          height: 30px;
+          /* 透明度 */
+          opacity: 0.6;
+        }
+        70% {
+          width: 40px;
+          height: 40px;
+          /* 透明度 */
+          opacity: 0.4;
+        }
+        100% {
+          width: 50px;
+          height: 50px;
+          opacity: 0;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="map" id="maps">
+      <div class="dotted"></div>
+      <div class="pulse1"></div>
+      <div class="pulse2"></div>
+      <div class="pulse3"></div>
+    </div>
+  </body>
+  <script>
+    //laod ripples show
+    function loadRipples(x, y) {
+      let ripples = document.createElement("div");
+      ripples.style.position = "fixed";
+      ripples.style.left = x + "px";
+      ripples.style.top = y + "px";
+      let pulse1 = document.createElement("div");
+      pulse1.style.position = "fixed";
+      pulse1.style.left = x + "px";
+      pulse1.style.top = y + "px";
+      let pulse2 = document.createElement("div");
+      pulse2.style.position = "fixed";
+      pulse2.style.left = x + "px";
+      pulse2.style.top = y + "px";
+      let pulse3 = document.createElement("div");
+      pulse3.style.position = "fixed";
+      pulse3.style.left = x + "px";
+      pulse3.style.top = y + "px";
+      ripples.classList.add("dotted");
+      pulse1.classList.add("pulse1");
+      pulse2.classList.add("pulse2");
+      pulse3.classList.add("pulse3");
+      document.getElementById("maps").append(ripples);
+      document.getElementById("maps").append(pulse1);
+      document.getElementById("maps").append(pulse2);
+      document.getElementById("maps").append(pulse3);
+      setTimeout(() => {
+        ripples.remove();
+        pulse1.remove();
+        pulse2.remove();
+        pulse3.remove();
+      }, 1000);
+    }
+    //random generate point
+    function randomPoints(min, max) {
+      let point = {
+        x: Math.random() * (max - min) + min,
+        y: Math.random() * (max - min) + min,
+      };
+      return point;
+    }
+
+    function handleClick(event) {
+      let x = event.clientX - event.target.offsetLeft;
+      let y = event.clientY - event.target.offsetTop;
+      console.log(randomPoints(0, 700));
+      loadRipples(x, y);
+    }
+
+    document.getElementById("maps").addEventListener("click", handleClick);
+
+    window.onload = () => {
+      setInterval(() => {
+        loadRipples(randomPoints(0, 700).x, randomPoints(0, 700).y);
+      }, 100);
+    };
+  </script>
+</html>

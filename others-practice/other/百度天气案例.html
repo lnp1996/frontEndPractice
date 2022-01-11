@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="../js/jquery-3.4.1.min.js"></script>
+    <style>
+        .weather_now a{
+            display: inline;
+        }
+        .weather_now img{
+            width: 30px;
+            vertical-align: middle;
+            display: inline;
+        }  
+        .weather_now{
+            width: 100%;
+            background-color: grey;
+
+        }
+        .show_weather{
+            display: none;
+            position: absolute;
+            background-color: aqua;
+            top: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class= 'header' >
+        <div class='weather_now'>
+            <a href="javascript:;">
+                <span class="city">南京:</span>
+                <img src= '../images/100.png' alt="" class="weatherImg">
+                <span class="temp">31°C</span>
+                <span class="cond_txt">晴</span>
+                <span class='f1'>32</span>
+            </a>
+            <div class="show_weather">
+                <p>hello</p>
+            </div>
+        </div>
+    </div>
+        <script>  
+            $(function(){
+                $('.weather_now').mouseenter(function(){
+                    $('.show_weather').stop().fadeIn()
+                })
+                $('.weather_now').mouseleave(function(){
+                    $('.show_weather').stop().fadeOut()
+                })
+            })
+
+        </script>
+</body>
+
+
+
+</html>

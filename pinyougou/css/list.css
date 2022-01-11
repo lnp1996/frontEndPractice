@@ -1,0 +1,169 @@
+.sk {
+    position: absolute;
+    top: 40px;
+    left: 185px;
+    height: 32px;
+    border-left: 1px solid #b1191a;
+    padding: 5px 0 0 10px;
+}
+
+.sk_list li {
+    float: left;
+    line-height: 45px;
+}
+
+.sk_list li a {
+    margin: 0 20px;
+    font-size: 16px;
+    color: black;
+    font-weight: bold;
+}
+
+.sk_list li a:hover {
+    color: #e33333;
+}
+
+.sk_con li {
+    float: left;
+    line-height: 45px;
+}
+
+.sk_con li {
+    margin: 0 25px;
+    font-size: 14px;
+    color: black;
+}
+
+.content_body {
+    /* overflow: hidden; */
+}
+
+.content_head {
+    height: 100px;
+    background: url(../upload/bg.png) no-repeat;
+    margin-bottom: 20px;
+}
+
+.ct_bd_good {
+    position: relative;
+    float: left;
+    width: 288px;
+    height: 448px;
+    margin: 0 15px 15px 0;
+    border: 1px solid transparent;
+}
+
+.ct_bd_good:hover {
+    border: 1px solid #e12228;
+}
+
+.content_body ul {
+    width: 1230px;
+}
+
+.ct_bd_good img {
+    margin-left: 20px;
+}
+
+.ct_bd_good_title {
+    font-size: 14px;
+    color: #666666;
+    font-weight: normal;
+    padding: 20px 10px;
+}
+
+.ct_bd_good_price em {
+    padding: 0 10px;
+    color: #e60012;
+    font-size: 22px;
+}
+
+.ct_bd_good_price del {
+    font-size: 14px;
+    font-weight: 700;
+    color: #a4a4a4;
+}
+
+.ct_bd_good_progress {
+    padding: 0 10px;
+}
+
+.bar {
+    display: inline-block;
+    width: 130px;
+    height: 10px;
+    border: 1px solid #b1191a;
+    /* 行内块元素和文字垂直居中 */
+    vertical-align: middle;
+    border-radius: 5px;
+}
+
+.bar_1 {
+    width: 87%;
+    height: 10px;
+    background-color: #f24349;
+}
+
+.ct_bd_good_progress em,
+.ct_bd_good_progress i {
+    color: #f24349
+}
+
+.ct_bd_good_buy {
+    position: absolute;
+    bottom: 0;
+    height: 60px;
+    width: 100%;
+    font-size: 18px;
+    text-align: center;
+    line-height: 60px;
+    background-color: #b1191a;
+    color: white;
+}
+
+.page {
+    /* 文字，行内块、行内元素都居中 */
+    text-align: center;
+    margin: 40px 0;
+}
+
+.page_num a {
+    display: inline-block;
+    width: 36px;
+    height: 36px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+    line-height: 36px;
+}
+
+.page_num .page_num_prev,
+.page_num .page_num_next {
+    width: 83px;
+}
+
+.page_num .current,
+.page_num .shenglue {
+    border: 1px solid transparent;
+    background-color: transparent;
+}
+
+.page_skip .texts {
+    width: 40px;
+    height: 36px;
+    border: 1px solid #ccc;
+    transition: all .2s;
+}
+
+.page_skip .texts:focus {
+    width: 50px;
+    border-color: skyblue;
+}
+
+.page_skip a {
+    display: inline-block;
+    width: 50px;
+    height: 36px;
+    line-height: 36px;
+    border: 1px solid #ccc;
+    background-color: #f7f7f7;
+}

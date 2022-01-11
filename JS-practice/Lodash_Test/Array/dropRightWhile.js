@@ -1,0 +1,3 @@
+function dropRightWhile(array, func) {
+
+}

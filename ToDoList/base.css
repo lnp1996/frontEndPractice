@@ -1,0 +1,58 @@
+/* 页面通用设置样式 */
+* {
+    margin: 0;
+    padding: 0;
+}
+
+em,
+i {
+    font-style: normal;
+}
+
+li {
+    list-style: none;
+}
+
+img {
+    border: 0;
+    vertical-align: middle;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    color: #e33333;
+}
+
+button,
+input {
+    outline: none;
+}
+
+body {
+    font: 16px;
+    color: #666666;
+}
+
+.hide,
+.none {
+    display: none;
+}
+
+.clearfix:after {
+    visibility: hidden;
+    clear: both;
+    display: block;
+    content: "";
+    height: 0
+}
+
+.clearfix {
+    *zoom: 1
+}
